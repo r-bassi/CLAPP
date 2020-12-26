@@ -1,0 +1,16 @@
+[
+  {
+    "customerName": "Rohit",
+    "customerNumber": 1,
+    "customerSpent": 600.0,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Guy",
+    "customerNumber": 2,
+    "customerSpent": 199.0,
+    "changed": false,
+    "obs": []
+  }
+]
