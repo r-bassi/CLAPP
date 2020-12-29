@@ -14,6 +14,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 public class JsonAddCustomerSpent extends MenuCaseAbstract {
+    Double discountThreshold = 200.0;
 
 
     private List<UserDetails> userDetailsList;
@@ -95,10 +96,10 @@ public class JsonAddCustomerSpent extends MenuCaseAbstract {
     }
 
     private void getDiscount(UserDetails c) {
-        Double discountThreshold = 200.0;
         if (c.getCustomerSpent() >= discountThreshold) {
             System.out.println(c.getCustomerName() + " has a 5% discount on their next purchase!");
         }
+        
     }
 
 }

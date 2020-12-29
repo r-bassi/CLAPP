@@ -12,5 +12,12 @@
     "customerSpent": 199.0,
     "changed": false,
     "obs": []
+  },
+  {
+    "customerName": "Rohit",
+    "customerNumber": 6,
+    "customerSpent": 199.0,
+    "changed": false,
+    "obs": []
   }
 ]
