@@ -12,8 +12,8 @@ public abstract class MenuCaseAbstract extends UserDetails {
     private static final String FILENAME = "data/userdetails.json";
     UserDetails[] customers;
 
-    public MenuCaseAbstract(String customerName, int customerNumber, Double customerSpent) {
-        super(customerName, customerNumber, customerSpent);
+    public MenuCaseAbstract(String customerName, int customerNumber, Double customerSpent, int customerDiscount) {
+        super(customerName, customerNumber, customerSpent, customerDiscount);
     }
 
     MenuCaseAbstract() {

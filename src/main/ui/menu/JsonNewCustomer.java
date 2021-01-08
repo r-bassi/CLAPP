@@ -21,19 +21,10 @@ public class JsonNewCustomer extends MenuCaseAbstract {
     private List<UserDetails> userDetailsList;
 
 
-    public JsonNewCustomer(String customerName, int customerNumber, Double customerSpent) {
-        super(customerName, customerNumber, customerSpent);
+    public JsonNewCustomer(String customerName, int customerNumber, Double customerSpent, int customerDiscount) {
+        super(customerName, customerNumber, customerSpent, customerDiscount);
 
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("You picked Add Customer");
-//        System.out.println("Enter New Customer Name:");
-//        String name = scanner.nextLine();
-//        System.out.println("Enter New Customer Number:");
-//        // User must enter an integer
-//        Integer number = scanner.nextInt();
-//        System.out.println("Enter Amount Spent:");
-//        Double spent = scanner.nextDouble();
-        UserDetails c = new UserDetails(customerName, customerNumber, customerSpent);
+        UserDetails c = new UserDetails(customerName, customerNumber, customerSpent, customerDiscount);
 
         try {
             new JsonNewCustomer(c, customerNumber);

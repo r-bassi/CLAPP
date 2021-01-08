@@ -6,11 +6,6 @@ import ui.UserDetails;
 public class JsonFindCustomerByNumber extends MenuCaseAbstract {
 
     public JsonFindCustomerByNumber(int i) {
-//        Scanner in = new Scanner(System.in);
-//        int i;
-//        System.out.println("You picked Find Customer By Number");
-//        System.out.println("Customer Number: ");
-//        i = in.nextInt();
         super();
         try {
             jsonReader(i);

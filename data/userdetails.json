@@ -3,6 +3,7 @@
     "customerName": "Rohit",
     "customerNumber": 1,
     "customerSpent": 600.0,
+    "customerDiscount": 0,
     "changed": false,
     "obs": []
   },
@@ -10,6 +11,7 @@
     "customerName": "Guy",
     "customerNumber": 2,
     "customerSpent": 199.0,
+    "customerDiscount": 0,
     "changed": false,
     "obs": []
   },
@@ -17,6 +19,7 @@
     "customerName": "Rohit",
     "customerNumber": 6,
     "customerSpent": 199.0,
+    "customerDiscount": 0,
     "changed": false,
     "obs": []
   }

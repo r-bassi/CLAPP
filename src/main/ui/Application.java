@@ -34,14 +34,15 @@ public class Application {
             @Override
             public void actionPerformed(ActionEvent e) {
                 redirectSystemStreams();
-                String custname = textField1.getText();
-                Integer custnum = Integer.valueOf(textField2.getText());
-                Double custspent = Double.valueOf(textField3.getText());
-                new JsonNewCustomer(custname, custnum, custspent);
+                String custName = textField1.getText();
+                Integer custNum = Integer.valueOf(textField2.getText());
+                Double custSpent = Double.valueOf(textField3.getText());
+                Integer custDisc = Integer.valueOf(textField4.getText());
+                new JsonNewCustomer(custName, custNum, custSpent, custDisc);
                 textField1.setText("");
                 textField2.setText("");
                 textField3.setText("");
-
+                textField4.setText("");
             }
         });
 

@@ -9,11 +9,13 @@ public class UserDetails extends Observable implements Serializable {
     private String customerName;
     private int customerNumber;
     private Double customerSpent;
+    private int customerDiscount;
 
-    public UserDetails(String customerName, int customerNumber, Double customerSpent) {
+    public UserDetails(String customerName, int customerNumber, Double customerSpent, int customerDiscount) {
         this.customerName = customerName;
         this.customerNumber = customerNumber;
         this.customerSpent = customerSpent;
+        this.customerDiscount = customerDiscount;
     }
 
     public UserDetails() {
@@ -31,9 +33,18 @@ public class UserDetails extends Observable implements Serializable {
         return this.customerName;
     }
 
+    public int getCustomerDiscount() {
+        return this.customerDiscount;
+    }
+
     public void setCustomerSpent(Double newnum) {
         this.customerSpent = this.customerSpent + newnum;
     }
+
+    public void setCustomerDiscount(int newnum) {
+        this.customerDiscount = this.customerDiscount + newnum;
+    }
+
 
     @Override
     public boolean equals(Object o) {
@@ -57,10 +68,9 @@ public class UserDetails extends Observable implements Serializable {
 
     @Override
     public String toString() {
-        return "UserDetails{"
-                + "customerName='" + customerName + '\''
-                + ", customerNumber=" + customerNumber
-                + ", customerSpent=" + customerSpent
-                + '}';
+        return  "Customer Name: " + customerName + ",\n"
+                + "Customer Number: " + customerNumber + ",\n"
+                + "Customer Spent: $" + customerSpent + ",\n"
+                + "Customer Discount: " + customerSpent + "%";
     }
 }

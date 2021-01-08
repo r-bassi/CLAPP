@@ -19,13 +19,8 @@ public class JsonAddCustomerSpent extends MenuCaseAbstract {
 
     private List<UserDetails> userDetailsList;
 
+    //Adds a dollar value to the amount the customer has spent
     public JsonAddCustomerSpent(int customerNumber, Double customerSpent) {
-//        Scanner in = new Scanner(System.in);
-//        System.out.println("You picked Add to Customer Spending by Customer Number");
-//        System.out.println("Customer Number: ");
-//        int cnum = in.nextInt();
-//        System.out.println("Amount to add: ");
-//        Double howMuch = in.nextDouble();
         super();
         if (customerSpent > 0) {
             try {
@@ -42,6 +37,7 @@ public class JsonAddCustomerSpent extends MenuCaseAbstract {
 
     }
 
+    //Changes how much the customer has spent using json
     private void jsonReader(Integer cnum, Double howMuch) throws CantFindCustomerException, OldCustomerNumberException {
         try {
             setup();
@@ -65,6 +61,7 @@ public class JsonAddCustomerSpent extends MenuCaseAbstract {
         }
     }
 
+    //Finds the correct customer in the array of saved customers
     private static <T> int find(T[] a, T target) {
         for (int i = 0; i < a.length; i++) {
             if (target.equals(a[i])) {
@@ -95,6 +92,7 @@ public class JsonAddCustomerSpent extends MenuCaseAbstract {
 
     }
 
+    // Rudimentary customer discount algorithm
     private void getDiscount(UserDetails c) {
         if (c.getCustomerSpent() >= discountThreshold) {
             System.out.println(c.getCustomerName() + " has a 5% discount on their next purchase!");
