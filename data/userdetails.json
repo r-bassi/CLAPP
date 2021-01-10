@@ -2,7 +2,7 @@
   {
     "customerName": "Rohit",
     "customerNumber": 1,
-    "customerSpent": 600.0,
+    "customerSpent": 612.0,
     "customerDiscount": 0,
     "changed": false,
     "obs": []
@@ -20,6 +20,94 @@
     "customerNumber": 6,
     "customerSpent": 199.0,
     "customerDiscount": 0,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Manny",
+    "customerNumber": 7,
+    "customerSpent": 100.0,
+    "customerDiscount": 5,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "guy",
+    "customerNumber": 12,
+    "customerSpent": 111.0,
+    "customerDiscount": 0,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Person",
+    "customerNumber": 14,
+    "customerSpent": 15.0,
+    "customerDiscount": 12,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "person",
+    "customerNumber": 8,
+    "customerSpent": 150.0,
+    "customerDiscount": 12,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Gloria",
+    "customerNumber": 15,
+    "customerSpent": 139.0,
+    "customerDiscount": 0,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Jay",
+    "customerNumber": 13,
+    "customerSpent": 56.0,
+    "customerDiscount": 0,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Gloria2",
+    "customerNumber": 16,
+    "customerSpent": 250.0,
+    "customerDiscount": 32,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Phil",
+    "customerNumber": 17,
+    "customerSpent": 49.0,
+    "customerDiscount": 0,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Phil2",
+    "customerNumber": 18,
+    "customerSpent": 49.0,
+    "customerDiscount": 0,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Claire",
+    "customerNumber": 19,
+    "customerSpent": 45.0,
+    "customerDiscount": 0,
+    "changed": false,
+    "obs": []
+  },
+  {
+    "customerName": "Haley",
+    "customerNumber": 20,
+    "customerSpent": 40.0,
+    "customerDiscount": 4,
     "changed": false,
     "obs": []
   }

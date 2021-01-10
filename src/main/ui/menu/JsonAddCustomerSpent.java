@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import model.exceptions.CantFindCustomerException;
 import model.exceptions.OldCustomerNumberException;
+import ui.Application;
 import ui.UserDetails;
 
 import java.io.FileReader;
@@ -14,8 +15,6 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 public class JsonAddCustomerSpent extends MenuCaseAbstract {
-    Double discountThreshold = 200.0;
-
 
     private List<UserDetails> userDetailsList;
 
@@ -47,9 +46,9 @@ public class JsonAddCustomerSpent extends MenuCaseAbstract {
                 if (c.getCustomerNumber() == cnum) {
                     int getIndex = find(customers, c);
                     c.setCustomerSpent(howMuch);
+                    c.setCustomerDiscount(Application.getDiscount(c));
                     jsonWriter(c, getIndex);
                     System.out.println(c);
-                    getDiscount(c);
 
                     return;
                 }
@@ -92,12 +91,5 @@ public class JsonAddCustomerSpent extends MenuCaseAbstract {
 
     }
 
-    // Rudimentary customer discount algorithm
-    private void getDiscount(UserDetails c) {
-        if (c.getCustomerSpent() >= discountThreshold) {
-            System.out.println(c.getCustomerName() + " has a 5% discount on their next purchase!");
-        }
-        
-    }
 
 }

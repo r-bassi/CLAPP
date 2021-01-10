@@ -1,9 +1,6 @@
 package ui;
 
-import ui.menu.JsonAddCustomerSpent;
-import ui.menu.JsonFindCustomerByName;
-import ui.menu.JsonFindCustomerByNumber;
-import ui.menu.JsonNewCustomer;
+import ui.menu.*;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,7 +9,7 @@ import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
 
-public class Application {
+public class Application extends UserDetails{
     private JTabbedPane mainMenu;
     private JPanel panel1;
     private JTextField textField1;
@@ -29,20 +26,20 @@ public class Application {
     private JTextArea textArea1;
     private JButton clearButton;
 
+
     public Application() {
         submitButton.addActionListener(new ActionListener() {
+
             @Override
             public void actionPerformed(ActionEvent e) {
                 redirectSystemStreams();
                 String custName = textField1.getText();
                 Integer custNum = Integer.valueOf(textField2.getText());
                 Double custSpent = Double.valueOf(textField3.getText());
-                Integer custDisc = Integer.valueOf(textField4.getText());
-                new JsonNewCustomer(custName, custNum, custSpent, custDisc);
+                new JsonNewCustomer(custName, custNum, custSpent, 0);
                 textField1.setText("");
                 textField2.setText("");
                 textField3.setText("");
-                textField4.setText("");
             }
         });
 
@@ -118,12 +115,22 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Customer Rewards Program");
+        JFrame frame = new JFrame("CLAPP");
         frame.setLocationRelativeTo(null);
         frame.setContentPane(new Application().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(650, 720);
         frame.setVisible(true);
+    }
+
+    // Rudimentary customer discount algorithm
+    public static int getDiscount(UserDetails c) {
+        if (c.getCustomerSpent() <= 0)
+            return 0;
+        else if (c.getCustomerSpent() < 50)
+            return 4;
+        else
+            return 8;
     }
 
 

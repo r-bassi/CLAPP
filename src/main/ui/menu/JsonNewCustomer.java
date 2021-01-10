@@ -3,6 +3,7 @@ package ui.menu;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import ui.Application;
 import ui.UserDetails;
 import model.exceptions.OldCustomerNumberException;
 import model.observer.NewCustomerSaver;
@@ -25,6 +26,7 @@ public class JsonNewCustomer extends MenuCaseAbstract {
         super(customerName, customerNumber, customerSpent, customerDiscount);
 
         UserDetails c = new UserDetails(customerName, customerNumber, customerSpent, customerDiscount);
+        c.customerDiscount = Application.getDiscount(c);
 
         try {
             new JsonNewCustomer(c, customerNumber);
@@ -46,15 +48,15 @@ public class JsonNewCustomer extends MenuCaseAbstract {
         userDetailsList = gson.fromJson(fr, dtoListType);
         fr.close();
         // If it was an empty one create initial list
-        if (null == userDetailsList) {
+        if (userDetailsList == null) {
             userDetailsList = new ArrayList<>();
         }
-        // Add new item to the list
         for (UserDetails custs : userDetailsList) {
             if (custs.getCustomerNumber() == i) {
                 throw new OldCustomerNumberException("This Customer Number Already Exists!");
             }
         }
+        // Add new item to the list
         userDetailsList.add(c);
         addObserver(new NewCustomerSaver());
         setChanged();

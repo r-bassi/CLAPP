@@ -34,7 +34,7 @@ public abstract class MenuCaseAbstract extends UserDetails {
             customers = gson.fromJson(reader, UserDetails[].class);
 
             // Print out the customers we found
-            System.out.println("Customer(s): ");
+            System.out.println("\n" + "Customer(s): ");
         } catch (FileNotFoundException e) {
             System.out.println("File Not Found!");
         }
