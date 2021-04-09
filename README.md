@@ -1,6 +1,9 @@
 # CLAPP
 A java based customer loyalty program application for small businesses
 
+# CLAPP User Handbook
+https://rohitbassi.me/CLAPP-user-doc/
+
 # Current Functionality
 - Adding a new customer
 - Finding a customer by name (exact match case sensitive)
